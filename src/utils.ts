@@ -83,16 +83,20 @@ export async function filterAsync<T>(
  * @param items2 Second array of items (takes precedence on duplicates)
  * @returns Merged array with duplicates removed
  */
-export function mergeItems<T extends { id: string }>(
+export function mergeItems<T extends { id?: string }>(
   items1: T[],
   items2: T[]
 ): T[] {
   const map = new Map<string, T>();
   items1.forEach((item) => {
-    map.set(item.id, item);
+    if (item.id) {
+      map.set(item.id, item);
+    }
   });
   items2.forEach((item) => {
-    map.set(item.id, item);
+    if (item.id) {
+      map.set(item.id, item);
+    }
   });
   return Array.from(map.values());
 }
