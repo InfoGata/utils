@@ -1,5 +1,7 @@
 # @infogata/utils
 
+[![npm version](https://img.shields.io/npm/v/@infogata/utils.svg)](https://www.npmjs.com/package/@infogata/utils)
+
 A TypeScript utility library providing common functions and helpers for Infogata projects.
 
 ## Projects Using This Library
