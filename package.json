@@ -7,14 +7,21 @@
   "author": "Infogata",
   "repository": {
     "type": "git",
-    "url": "https://github.com/infogata/utils.git"
+    "url": "git+https://github.com/infogata/utils.git"
   },
   "files": [
     "dist"
   ],
-  "main": "./dist/infogata-utils.umd.js",
+  "main": "./dist/infogata-utils.js",
   "module": "./dist/infogata-utils.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/infogata-utils.js",
+      "default": "./dist/infogata-utils.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
