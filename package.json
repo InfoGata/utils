@@ -7,8 +7,13 @@
   "author": "Infogata",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/infogata/utils.git"
+    "url": "git+https://github.com/InfoGata/utils.git"
   },
+  "homepage": "https://github.com/InfoGata/utils#readme",
+  "bugs": {
+    "url": "https://github.com/InfoGata/utils/issues"
+  },
+  "sideEffects": false,
   "files": [
     "dist"
   ],
@@ -28,7 +33,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "lint": "eslint src --ext .ts,.tsx",
+    "lint": "eslint src",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
@@ -45,9 +50,16 @@
     "vite-plugin-dts": "^5.0.2",
     "vitest": "^4.1.8"
   },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "keywords": [
     "typescript",
     "utils",
     "utility"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
